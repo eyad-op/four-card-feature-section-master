@@ -99,7 +99,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2rem;
+    margin: 5rem;
 
     .features__header {
       width: 500px;
@@ -119,9 +119,19 @@ body {
         width: 350px;
         height: 250px;
       }
-      .card__cyan,
-      .card__orange {
+      .card__blue {
+        order: 3;
         transform: translateY(50%);
+      }
+      .card__cyan {
+        order: 1;
+        transform: translateY(50%);
+      }
+      .card__red {
+        order: 2;
+      }
+      .card__orange {
+        order: 4;
       }
     }
   }
