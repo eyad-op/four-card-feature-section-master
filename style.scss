@@ -1,0 +1,128 @@
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+
+$VD-Blue: hsl(234, 12%, 34%);
+$Gray-Blue: hsl(229, 6%, 66%);
+$VL-Gray: hsl(0, 0%, 98%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: $VD-Blue;
+}
+
+body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: auto;
+  background-color: $VL-Gray;
+}
+
+.features {
+  margin: 5rem 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .features__header {
+    text-align: center;
+    font-size: 2rem;
+
+    .header__title {
+      font-size: 1.6rem;
+      span {
+        font-size: 1.6rem;
+        font-weight: 200;
+      }
+    }
+    .header__description {
+      color: $Gray-Blue;
+      padding-top: 1.5rem;
+      padding-bottom: 5rem;
+      max-width: 470px;
+    }
+  }
+
+  .features__card {
+    width: 350px;
+    height: 225px;
+    margin-bottom: 2rem;
+    line-height: 1.5rem;
+    position: relative;
+    border-radius: 5px;
+    padding: 2rem;
+
+    h1 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding-bottom: 0.6rem;
+    }
+    p {
+      color: $Gray-Blue;
+      font-size: 12px;
+    }
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      margin: 2rem;
+    }
+    box-shadow: 0px 16px 50px -15px rgba(84, 87, 102, 0.36);
+  }
+
+  .card__cyan {
+    border-top: 5px solid $Cyan;
+  }
+  .card__red {
+    border-top: 5px solid $Red;
+  }
+  .card__orange {
+    border-top: 5px solid $Orange;
+  }
+  .card__blue {
+    border-top: 5px solid $Blue;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+
+    .features__header {
+      width: 500px;
+      .header__title {
+        font-size: 2.4rem;
+        span {
+          font-size: 2.4rem;
+        }
+      }
+    }
+    .features__cards-wrapper {
+      max-width: 1200px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      .features__card {
+        width: 350px;
+        height: 250px;
+      }
+      .card__cyan,
+      .card__orange {
+        transform: translateY(50%);
+      }
+    }
+  }
+}
